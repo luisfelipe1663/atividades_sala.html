@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            text-transform: capitalize;
+        }
+
+        hr {
+            margin-bottom: 10px;
+            border: none;
+            border-top: 2px solid #ccc;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Container dos botões */
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        /* Container geral dos cards */
+        .cards-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Cada linha de cards */
+        .cardcarros,
+        .cardfruta,
+        .cardadulto {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Cards individuais */
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            width: calc(33.333% - 14px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            padding: 15px 15px 10px;
+        }
+
+        .card-title h2 {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        .card-text {
+            padding: 0 15px 15px;
+        }
+
+        .card-text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Âncoras invisíveis para scroll */
+        .anchor {
+            display: block;
+            position: relative;
+            top: -80px;
+            visibility: hidden;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modelo de página</h1>
+    <hr>
+    <h2>Página de teste</h2>
+
+    <!-- Botões de navegação -->
+    <div class="buttons-container">
+        <div class="button">
+            <a href="#carros">Carros</a>
+        </div>
+        <div class="button">
+            <a href="#frutas">Frutas</a>
+        </div>
+        <div class="button">
+            <a href="#pessoas">Pessoas</a>
+        </div>
+    </div>
+
+    <!-- Container de todos os cards -->
+    <div class="cards-wrapper">
+        
+        <!-- Seção Carros -->
+        <span id="carros" class="anchor"></span>
+        <div class="cardcarros">
+            <div class="card">
+                <img src="img/carros..jpg" alt="carros antigos">
+                <div class="card-title">
+                    <h2>Carros antigos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download.jpg" alt="carros novos">
+                <div class="card-title">
+                    <h2>Carros novos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download (1).jpg" alt="carros populares">
+                <div class="card-title">
+                    <h2>Carros populares</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Frutas -->
+        <span id="frutas" class="anchor"></span>
+        <div class="cardfruta">
+            <div class="card">
+                <img src="img/download (2).jpg" alt="frutas cítricas">
+                <div class="card-title">
+                    <h2>Frutas cítricas</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download (3).jpg" alt="frutas vermelhas">
+                <div class="card-title">
+                    <h2>Frutas vermelhas</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download (4).jpg" alt="frutas verdes">
+                <div class="card-title">
+                    <h2>Frutas verdes</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Pessoas -->
+        <span id="pessoas" class="anchor"></span>
+        <div class="cardadulto">
+            <div class="card">
+                <img src="img/download (5).jpg" alt="adultos">
+                <div class="card-title">
+                    <h2>Adultos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download (6).jpg" alt="crianças">
+                <div class="card-title">
+                    <h2>Crianças</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download (7).jpg" alt="idosos">
+                <div class="card-title">
+                    <h2>Idosos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

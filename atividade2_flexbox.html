@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+
+    .butto {
+            background-color: #666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .cardcarros {
+            display: flex;
+            flex-direction: row-reverse;
+
+        }
+
+        .cardfruta {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .cardadulto {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            width: calc(33.333% - 14px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .card-title {
+            padding: 15px 15px 10px;
+        }
+
+        .card-title h2 {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        .card-text {
+            padding: 0 15px 15px;
+        }
+
+        .card-text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modelo de pagina</h1>
+    <hr>
+    <h2>Pagina teste</h2>
+    <br>
+    <div class="flex-container">
+        <div class="butto">
+            <a href="#carros"> carros</a>
+        </div>
+        <div class="butto">
+           <a href="#frutas"> frutas</a>
+        </div>
+    <div class="butto">
+        <a href="#pessoas">  pessoas </a></div>
+    
+<a id="carros"></a>
+        <div class="cardcarros">
+            <div class="card">
+                <img src="img/carros..jpg" alt="carros antigos">
+                <div class="card-title">
+                    <h2>carros antigos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="img/download (1).jpg" alt="carros antigos">
+                <div class="card-title">
+                    <h2>carros populares</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/download.jpg" alt="carros antigos">
+                <div class="card-title">
+                    <h2>carros novos</h2>
+                </div>
+                <div class="card-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                        doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                        laboriosam!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="frutas"></a>
+    <div class="cardfruta">
+        <div class="card">
+            <img src="img/download (2).jpg" alt="frutas">
+            <div class="card-title">
+                <h2>frutas</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/download (3).jpg" alt="frutas vermelhas">
+            <div class="card-title">
+                <h2>frutas vermelhas</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/download (4).jpg" alt="frutas verdes">
+            <div class="card-title">
+                <h2>frutas verdes</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <a id="pessoas"></a>
+    <div class="cardadulto">
+        <div class="card">
+            <img src="img/download (5).jpg" alt="adultos">
+            <div class="card-title">
+                <h2>adultos</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/download (6).jpg" alt="crianças">
+            <div class="card-title">
+                <h2>crianças</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/download (7).jpg" alt="idosos">
+            <div class="card-title">
+                <h2>idosos</h2>
+            </div>
+            <div class="card-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel sit rem commodi, iure
+                    doloremque animi. Aliquam, ex libero explicabo, officia ea dicta, rem ipsam sed quo qui harum
+                    laboriosam!
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
